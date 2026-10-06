@@ -1,0 +1,5 @@
+prefix: "&8[&aGMRc&8] &r"
+no-permission: "&cYou don't have permission to use this command!"
+list-not-found: "&cCommand list &e%list%&c not found."
+player-not-found: "&cPlayer not found on the server."
+reloaded: "&aConfiguration successfully reloaded!"

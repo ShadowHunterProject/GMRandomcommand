@@ -1,0 +1,19 @@
+name: GMRandomcommand
+version: '${project.version}'
+main: com.gm.randomcommand.GMRandomCommand
+api-version: 1.13
+authors: [GM]
+description: A secure and modern random command executor plugin.
+
+commands:
+  gmrc:
+    description: Main command for GMRandomcommand
+    usage: /<command> [list] [player] [count]
+    aliases: [gmr]
+    permission: gmrandomcommand.admin
+    permission-message: §cYou don't have permission to use this command!
+
+permissions:
+  gmrandomcommand.admin:
+    description: Allows reloading the plugin configuration and executing any list regardless of list permissions.
+    default: op

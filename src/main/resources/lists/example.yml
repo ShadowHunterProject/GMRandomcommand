@@ -1,0 +1,31 @@
+# ======================================================= #
+#                 LIST CREATION GUIDE                     #
+# ======================================================= #
+# - You can create as many .yml files in this folder 
+#   (lists) as you want. The plugin will read all files.
+# - Use %player% to represent the player's name.
+# - You can use PlaceholderAPI Placeholders if the server 
+#   has it installed (e.g., %player_name%, %vault_eco_balance%).
+# - Commands are executed via the CONSOLE (Server).
+# ======================================================= #
+
+# Example 1: Equal chances (Without use-weight)
+# All commands below have an EQUAL chance (25%)
+basic_reward:
+  commands:
+    - "give %player% diamond 1"
+    - "give %player% iron_ingot 5"
+    - "give %player% gold_ingot 3"
+    - "xp add %player% 100"
+
+# Example 2: Using weight probability (With use-weight: true)
+# Syntax: "Weight:Command"
+# The sum of weights does not have to be 100.
+# Probability % = (Command Weight / Total Weights)
+vip_reward:
+  use-weight: true
+  commands:
+    - "50:give %player% diamond 5" # 50 parts chance
+    - "30:give %player% emerald 10" # 30 parts chance
+    - "19:eco give %player% 5000" # 19 parts chance
+    - "1:broadcast &e%player% &fjust hit the jackpot from &aVIP Reward&f!" # Only 1 part chance (Super Rare)
